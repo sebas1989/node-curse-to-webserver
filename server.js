@@ -82,6 +82,13 @@ app.get('/bad', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		pageTitle: 'Project Page',
+		projectMessage: 'Welcome to project section'
+	})
+});
+
 //to start listening, bind the application to a port
 //take a second argument qhich is optional (it's a function)
 app.listen(port, () => {
